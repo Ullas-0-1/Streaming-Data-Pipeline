@@ -1,0 +1,11 @@
+# Ignore all Python cache folders
+__pycache__/
+*/__pycache__/
+
+
+
+# Ignore the specific generators/pycache directory
+generators/__pycache__/
+
+# Ignore reset_topics.py in current directory
+reset_topics.py
