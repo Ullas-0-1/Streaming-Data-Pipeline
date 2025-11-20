@@ -9,3 +9,7 @@ generators/__pycache__/
 
 # Ignore reset_topics.py in current directory
 reset_topics.py
+
+plot_watermarks.py
+
+watermark_logger.py

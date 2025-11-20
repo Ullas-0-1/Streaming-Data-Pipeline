@@ -42,7 +42,7 @@ def run_flink_job_append():
             event_time_ns BIGINT,
             event_time_ltz AS TO_TIMESTAMP_LTZ(event_time_ns / 1000000, 3),
             kafka_timestamp TIMESTAMP_LTZ(3) METADATA FROM 'timestamp',
-            WATERMARK FOR event_time_ltz AS event_time_ltz - INTERVAL '4' SECOND 
+            WATERMARK FOR event_time_ltz AS event_time_ltz - INTERVAL '5' SECOND 
         ) WITH (
             'connector' = 'kafka',
             'topic' = '{TOPIC_NAME}',

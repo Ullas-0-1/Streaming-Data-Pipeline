@@ -16,7 +16,7 @@ from generators import uniform, poisson, mmpp
 
 
 NUM_PRODUCERS = 3
-TOTAL_THROUGHPUT = 45000
+TOTAL_THROUGHPUT = 90000
 TOTAL_SECONDS = 100
 WINDOW_SIZE_SEC = 10
 MAPPINGS_FILE = "mappings.json"
