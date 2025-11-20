@@ -47,8 +47,7 @@ Ensure you have the following installed:
 **Python Dependencies:**
 
 Bash
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   pip install confluent-kafka pyspark apache-flink pandas matplotlib   `
+`   pip install confluent-kafka pyspark apache-flink pandas matplotlib   `
 
 1\. Running with Apache Spark
 -----------------------------
@@ -63,7 +62,7 @@ Ensure Kafka and Zookeeper are running.
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   python reset_topics.py   `
+`   python reset_topics.py   `
 
 Step 3: Start the Analyzer
 
@@ -71,7 +70,7 @@ Open a terminal to watch the results live:
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   python latency_analyzer.py   `
+`   python latency_analyzer.py   `
 
 Step 4: Submit the Spark Job
 
@@ -79,7 +78,7 @@ You can run the job using spark-submit. Note: You must include the Kafka SQL pac
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   # Example command (adjust package version as needed)  spark-submit \    --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 \    spark_ctr_job.py   `
+`   # Example command (adjust package version as needed)  spark-submit \    --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 \    spark_ctr_job.py   `
 
 _(Alternatively, use the provided helper script ./run\_spark\_job.sh)_
 
@@ -89,7 +88,7 @@ In a new terminal, start generating traffic:
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   python producer.py   `
+`   python producer.py   `
 
 2\. Running with Apache Flink
 -----------------------------
@@ -101,8 +100,7 @@ Step 1: Start Flink Cluster
 Start the local Flink cluster (JobManager and TaskManager):
 
 Bash
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   # Assuming FLINK_HOME is set  $FLINK_HOME/bin/start-cluster.sh   `
+`   # Assuming FLINK_HOME is set  $FLINK_HOME/bin/start-cluster.sh   `
 
 _Verify the dashboard at http://localhost:8081._
 
@@ -110,13 +108,13 @@ _Verify the dashboard at http://localhost:8081._
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   python reset_topics.py   `
+`   python reset_topics.py   `
 
 **Step 3: Start the Analyzer**
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   python latency_analyzer.py   `
+`   python latency_analyzer.py   `
 
 Step 4: Submit the Flink Job
 
@@ -124,7 +122,7 @@ Flink requires the Kafka connector JARs to be present in the classpath (usually 
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   # Submit the job to the running cluster  $FLINK_HOME/bin/flink run \    -py flink_ctr_job_append.py   `
+`   # Submit the job to the running cluster  $FLINK_HOME/bin/flink run \    -py flink_ctr_job_append.py   `
 
 _(Alternatively, use the provided helper script ./run\_flink\_cluster.sh which handles environment variables automatically)._
 
@@ -132,4 +130,4 @@ _(Alternatively, use the provided helper script ./run\_flink\_cluster.sh which h
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   python producer.py   `
+`   python producer.py   `
